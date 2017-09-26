@@ -1,0 +1,75 @@
+page-item-detail {
+
+  #quote-block {
+    height: auto;
+    width: 75vw;
+    font-style: italic;
+    font-size: 19px;
+    color: $brand-color-1;
+
+    background-image: url(../../assets/img/plus-white.svg);
+    background-position: right 5px bottom 5px;
+    background-repeat: no-repeat;
+    background-size: 14px;
+  }
+
+  #quote-text {
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  #calendar-wide {
+    height: 15px;
+  }
+
+  #camera-plus{
+    height: 25px;
+  }
+ion-col.shareBlock.col {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+  .datetime {
+    /* margin: 10px; */
+    margin-left: 15px !important;
+}
+
+ .inLineBlock {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    display: flex;
+}
+.textarea {
+    overflow: auto;
+    height: auto;
+    font: inherit;
+    color: #666;
+}
+img#calendar-wide {
+    margin-top: 1px;
+    height: 25px !important;
+}
+
+textarea::first-line { 
+    font-weight: bold;
+    color: black;
+}
+
+.datetime-md {
+    padding: 0 !important;
+}
+#camera-plus {
+    height: 25px;
+    position: absolute;
+    right: 0;
+    margin-bottom: -11px;
+    display: inline-block;
+}
+}

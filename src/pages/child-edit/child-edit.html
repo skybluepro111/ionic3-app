@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="itemOrig">Edit Child</ion-title>
+    <ion-title *ngIf="!itemOrig">Add Child</ion-title>
+
+    <ion-buttons end>
+      <button ion-button [disabled]="!item.name" (click)="done()">Done</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Child's Name</ion-label>
+      <ion-input type="text" [(ngModel)]="item.name"></ion-input>
+    </ion-item>
+
+    <!--<ion-item>-->
+      <!--<ion-icon name="calendar" item-start></ion-icon>-->
+      <!--<ion-datetime displayFormat="MMM D, YYYY" pickerFormat="MMM D, YYYY"-->
+                    <!--[(ngModel)]="item.birthdate"></ion-datetime>-->
+    <!--</ion-item>-->
+    <ion-item>
+      <ion-label>Birthdate</ion-label>
+      <ion-datetime displayFormat="MMM D, YYYY" pickerFormat="MMM D, YYYY" [(ngModel)]="item.birthdate"></ion-datetime>
+    </ion-item>
+
+    <ion-item-divider>
+      Gender
+    </ion-item-divider>
+    <ion-item (click)="item.gender='Boy'">
+      Boy
+      <ion-icon *ngIf="item.gender == 'Boy'" name="checkmark" item-end></ion-icon>
+    </ion-item>
+
+    <ion-item (click)="item.gender='Girl'">
+      Girl
+      <ion-icon *ngIf="item.gender == 'Girl'" name="checkmark" item-end></ion-icon>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

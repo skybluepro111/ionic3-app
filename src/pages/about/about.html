@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add Soulment
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="save()">Save</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button block color="menu-o" (click)="quote()">
+    <div><p>{{quoteText}}</p></div>
+  </button>
+
+  <button ion-button icon-only>
+    <ion-icon name="camera"></ion-icon>
+  </button>
+
+  <div layout="row">
+    <ion-icon name="calendar">
+      <ion-datetime displayFormat="DDD, MMM D" pickerFormat="DDD, MMM D YYYY" [(ngModel)]="item.date"></ion-datetime>
+    </ion-icon>
+  </div>
+
+  <ion-textarea placeholder="{{placeholder}}" [(ngModel)]="item.text" rows="10"></ion-textarea>
+
+  <ion-icon name="pricetag"></ion-icon>
+  {{ placeholderTags}}<br/>
+
+  <ion-icon name="ios-book"></ion-icon>
+  {{ placeholderBooks}}&nbsp
+
+  <ion-icon name="ios-help-outline"></ion-icon>
+</ion-content>

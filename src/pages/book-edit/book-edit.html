@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="itemOrig">Edit Book</ion-title>
+    <ion-title *ngIf="!itemOrig">Add Book</ion-title>
+
+    <ion-buttons end>
+      <button ion-button [disabled]="!item.name" (click)="done()">Done</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Book Name</ion-label>
+      <ion-input type="text" [(ngModel)]="item.name"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="itemOrig">
+      <div text-center text-wrap>All existing <span sm-text-italics>{{itemOrig.name}}</span> tags will be renamed
+        <span sm-text-italics>{{item.name}}</span>.</div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

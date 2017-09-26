@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>plus-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="537.333572 119 537.333572 130.333572 526 130.333572 526 135.666428 537.333572 135.666428 537.333572 147 542.666428 147 542.666428 135.666428 554 135.666428 554 130.333572 542.666428 130.333572 542.666428 119"></polygon>
+    </defs>
+    <g id="Add-Soulment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(-617.000000, -295.000000)" id="Group">
+            <g transform="translate(94.000000, 179.000000)">
+                <g id="plus-white">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <path stroke="#AFD1CF" stroke-width="3" d="M535.833572,128.833572 L526,128.833572 L524.5,128.833572 L524.5,130.333572 L524.5,135.666428 L524.5,137.166428 L526,137.166428 L535.833572,137.166428 L535.833572,147 L535.833572,148.5 L537.333572,148.5 L542.666428,148.5 L544.166428,148.5 L544.166428,147 L544.166428,137.166428 L554,137.166428 L555.5,137.166428 L555.5,135.666428 L555.5,130.333572 L555.5,128.833572 L554,128.833572 L544.166428,128.833572 L544.166428,119 L544.166428,117.5 L542.666428,117.5 L537.333572,117.5 L535.833572,117.5 L535.833572,119 L535.833572,128.833572 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

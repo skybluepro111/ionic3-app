@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mindful Corner</ion-title>
+
+    <ion-buttons start>
+      <button id="profile" ion-button icon-only (click)="profile()">
+        <img *ngIf="!isNotification" src="assets/img/gear.svg">
+        <img *ngIf="isNotification" src="assets/img/gear-badged.svg">
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!--TODO: Add grid: 30px margins; 10px gutter; 170px images; 13px img/text; 30px above/below item -->
+  <div class="mc-item" *ngFor="let item of (currentItems | async)" (click)="openLink(item.url)">
+    <img src="{{ item.imageUrl }}">
+
+    <!--TODO: UI: Limit title to two rows with ellipsis. -->
+    <span sm-text-semibold> {{ item.title }}</span>
+  </div>
+
+</ion-content>

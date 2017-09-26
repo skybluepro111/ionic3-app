@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="76px" viewBox="0 0 77 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>capture</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tab-Bar" transform="translate(-337.000000, -11.000000)" fill="#FFFFFF">
+            <g id="2">
+                <g transform="translate(309.587217, 4.000000)">
+                    <g id="android-add-circle" transform="translate(27.000000, 7.000000)">
+                        <g transform="translate(0.969374, 0.000000)" id="capture">
+                            <path d="M38,0 C17.0132212,0 0,17.0132212 0,38 C0,58.9867788 17.0132212,76 38,76 C58.9867788,76 76,58.9867788 76,38 C76,17.0132212 58.9867788,0 38,0 Z M57.4714483,41.8365385 L41.7808307,41.8365385 L41.7808307,57.5480769 L34.1179709,57.5480769 L34.1179709,41.8365385 L18.4273533,41.8365385 L18.4273533,34.1634615 L34.1179709,34.1634615 L34.1179709,18.4519231 L41.7808307,18.4519231 L41.7808307,34.1634615 L57.4714483,34.1634615 L57.4714483,41.8365385 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

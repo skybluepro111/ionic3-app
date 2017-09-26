@@ -1,0 +1,77 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list *ngIf="profile$ | async as item">
+
+    <ion-item-divider> Settings</ion-item-divider>
+    <ion-item detail-push>
+      <!--https://ionicframework.com/docs/api/components/item/Item/-->
+      <!--TODO: This feature is not enabled by default for md and wp modes, but it can be enabled by setting the Sass variables $item-md-detail-push-show and $item-wp-detail-push-show, respectively, to true. It can also be disabled for ios by setting $item-ios-detail-push-show to false. See the theming documentation for more information on overriding Sass variables.-->
+
+      Username
+      <ion-note item-end>{{ item.username }}</ion-note>
+
+    </ion-item>
+
+    <ion-item [navPush]="whyUpgradePage" detail-push>
+      Subscription
+      <ion-note item-end>{{ (item.subscriptionStatus === 'noSubscription') ? 'Why Upgrade?' : 'Subscribed' }}</ion-note>
+    </ion-item>
+
+    <ion-item [navPush]="tagsListPage" detail-push>
+      Tags
+      <ion-note item-end>{{ (tags | async)?.length || 0 }} items</ion-note>
+    </ion-item>
+
+    <ion-item [navPush]="booksListPage" detail-push>
+      Soulments Books
+      <ion-note item-end>{{ (books | async)?.length || 0 }} items</ion-note>
+    </ion-item>
+
+    <ion-item [navPush]="notificationsSettingsPage" detail-push>
+      Notifications
+      <ion-note item-end>{{ (item.deliverAgeRelatedMilestones || item.deliverMindfulInspirations) ? 'On' : 'Off'}}
+      </ion-note>
+    </ion-item>
+
+    <ion-item-divider>
+      Children
+      <button ion-button icon-only clear [navPush]="childEditPage" item-end>
+        <ion-icon color="brand-color-1" name="add-circle"></ion-icon>
+      </button>
+    </ion-item-divider>
+
+    <ng-template #noChildren>
+      <ion-item sm-text-italics>
+        Add a child using the button above.
+      </ion-item>
+    </ng-template>
+    <span *ngIf="(children | async); else noChildren;">
+      <ion-item *ngFor="let child of (children | async)" [navPush]="childEditPage" [navParams]="{'item': child}" detail-push>
+        {{ child.name }} ({{ child.gender }})
+        <ion-note item-end>{{ child.birthdate | date }}</ion-note>
+      </ion-item>
+    </span>
+
+    <ion-item-divider></ion-item-divider>
+    <ion-item [navPush]="notificationsHistoryPage" detail-push>
+      Notification History
+      <ion-badge *ngIf="item.notifications" color="danger" item-end>{{ item.notifications?.length }}</ion-badge>
+    </ion-item>
+
+    <!--TODO: MD: Config-->
+    <ion-item detail-push (click)="openLink('http://www.soulments.com/#TreasureBox')">About Soulments</ion-item>
+
+    <ion-item detail-push (click)="shareApp()">Tell a Friend</ion-item>
+
+    <ion-item detail-push (click)="rateApp()">Review App</ion-item>
+
+  </ion-list>
+</ion-content>

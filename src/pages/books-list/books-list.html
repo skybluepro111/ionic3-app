@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Soulments Books</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only [navPush]="bookEditPage">
+        <ion-icon name="add" color="navigation"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ng-template #noItems>
+    <!--TODO: MD Config-->
+    <br>
+    <div text-center sm-text-italics>Get started by adding a Soulments Book.</div>
+  </ng-template>
+
+  <ion-list *ngIf="(items | async)?.length > 0; else noItems">
+
+    <ion-item-sliding *ngFor="let item of (items | async)" [hidden]="isSearch && !isItemVisible(item)">
+      <button ion-item detail-none [navPush]="bookEditPage" [navParams]="{'item': item}" no-lines>
+
+        {{ item.name }}
+        <ion-note item-end>{{ item.count?.length || 0 }} items</ion-note>
+
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <div text-center>
+    <button ion-button end color="brand-color-1" [navPush]="orderBookPage">Order Book</button>
+  </div>
+</ion-footer>

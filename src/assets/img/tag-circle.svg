@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>tag-circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Edit-Soulment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-30.000000, -1206.000000)" id="Tags">
+            <g transform="translate(30.000000, 1206.000000)">
+                <g id="Tag-Button">
+                    <g>
+                        <circle id="Oval-2" fill="#126463" cx="22" cy="22" r="22"></circle>
+                        <path d="M34.2109,10.3752 C34.1169,10.0936 33.9297,9.8124 33.6481,9.8124 L22.9609,7.9376 C22.7733,7.9376 22.4921,7.9376 22.3045,8.1252 L7.2109,23.2188 C6.9297,23.5 6.9297,23.9688 7.2109,24.25 L19.7733,36.8124 C19.8669,36.9064 20.0545,37 20.2421,37 C20.4297,37 20.6169,36.9064 20.7109,36.8124 L35.8045,21.7188 C35.9921,21.5312 36.0857,21.344 35.9921,21.0624 L34.2109,10.3752 Z M30.4609,16.5624 C29.6169,17.4064 28.3045,17.4064 27.5545,16.5624 C26.7109,15.7188 26.7109,14.4064 27.5545,13.6564 C28.3981,12.8124 29.7109,12.8124 30.4609,13.6564 C31.3045,14.4064 31.3045,15.7188 30.4609,16.5624 Z" id="Page-1" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

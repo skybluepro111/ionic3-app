@@ -1,0 +1,98 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="isAddMode()">Add Soulment</ion-title>
+    <ion-title *ngIf="isViewMode()">{{ item.date | date: 'EEE, MMM d yyyy'}}</ion-title>
+    <ion-title *ngIf="isEditMode()">Edit Soulment</ion-title>
+
+    <ion-buttons start>
+      <button *ngIf="isAddMode()" ion-button (click)="cancel()">Cancel</button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button *ngIf="isViewMode()" ion-button (click)="edit()">Edit</button>
+      <button *ngIf="!isViewMode()" ion-button (click)="save()">Save</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div text-center>
+    <button id="quote-block" *ngIf="quoteText" ion-button end color="brand-color-2" (click)="quote()"
+            text-wrap>
+      <span id="quote-text">{{quoteText}}</span>
+    </button>
+  </div>
+
+
+  <ion-list no-lines>
+
+    <div *ngIf="!isViewMode()" class="inLineBlock">
+<img id="calendar-wide" src="assets/img/calendar-wide.svg">
+<ion-datetime style="width: 110px;" displayFormat="DDD, MMM D" pickerFormat="DDD, MMM D YYYY"
+                      [(ngModel)]="item.date"></ion-datetime>
+                      <img id="camera-plus"  *ngIf="!isViewMode()" src="assets/img/camera-plus.svg" (click)="presentActionSheet()">
+      <hr>
+
+    </div>
+
+  </ion-list>
+  
+
+  <!--TODO: Fix location & size.-->
+  <!-- <ion-icon *ngIf="isViewMode()" name="share-outline"></ion-icon> -->
+
+
+
+       <ion-col col-1 class="shareBlock" *ngIf="isViewMode()">
+      <!-- <ion-icon   color="brand-color-3" name="ios-help-circle-outline" (click)="booksInfo()"></ion-icon> -->
+      
+      <button class="circle-button"  ion-button icon-only clear (click)='booksInfo()'>
+        <img src="assets/img/share-arrow.png">
+      </button>
+    </ion-col>
+
+  <!--TODO: Integrate textangular for picture insertion/display.-->
+  <ion-textarea [ngClass]="{'no-border': isViewMode()}" [readonly]="isViewMode()" placeholder="{{placeholder}}" [(ngModel)]="item.text"
+                rows="10"></ion-textarea>
+
+ <img [src]="base64Image" *ngIf="base64Image" />
+  <ion-row align-items-center>
+
+    <ion-col col-1>
+      <button class="circle-button"  ion-button icon-only clear (click)='tags()'>
+        <img src="assets/img/tag-circle.svg">
+      </button>
+    </ion-col>
+
+    <ion-col col-11>
+      <div *ngIf="(!item.tags || item.tags.length == 0) && !isViewMode()">{{ placeholderTags}}</div>
+      <label class="lblInfo" *ngFor="let tag of item.tags"> #{{ refTags[tag] }} </label>
+    </ion-col>
+
+  </ion-row>
+
+  <ion-row align-items-center>
+  <ion-col col-1>
+      <button class="circle-button"  ion-button icon-only clear (click)='books()'>
+        <img src="assets/img/book-circle.svg">
+      </button>
+    </ion-col>
+
+    <ion-col col-10>
+      <div *ngIf="(!item.books || item.books.length == 0) && !isViewMode()">{{ placeholderBooks}}</div>
+      <label class="lblInfo2" *ngFor="let book of item.books"> {{ refBooks[book] }} </label>
+    </ion-col>
+
+    <ion-col col-1>
+      <!-- <ion-icon   color="brand-color-3" name="ios-help-circle-outline" (click)="booksInfo()"></ion-icon> -->
+      
+      <button class="circle-button"  ion-button icon-only clear (click)='booksInfo()'>
+        <img src="assets/img/questions-circular-button.png">
+      </button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="23px" viewBox="0 0 35 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>IsVideo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Choose-Photos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="choose-photos" transform="translate(-395.000000, -676.000000)" stroke="#126463" fill="#FFFFFF">
+            <g id="Body" transform="translate(30.000000, 160.000000)">
+                <g id="Group-2-Copy-7" transform="translate(0.000000, 517.000000)">
+                    <g id="Video" transform="translate(366.000000, 0.000000)">
+                        <g id="Fill-2">
+                            <path d="M20.2297848,0 L2.20024407,0 C0.985330401,0.00341387753 0.00170693876,0.988744278 0,2.20237774 L0,18.3312421 C0.00341387753,19.5448756 0.986610605,20.5267921 2.20024407,20.5319129 L20.2297848,20.5319129 C21.4434182,20.528499 22.4270417,19.5448756 22.4287486,18.3312421 L22.4287486,14.6523623 L24.2538929,15.5527725 L30.1782506,18.4716378 C31.1832108,18.9666501 32.0051018,18.4549952 32.0051018,17.3343899 L32.0051018,3.19752304 C32.0051018,2.07734447 31.1832108,1.56696978 30.1799575,2.06198203 L24.2538929,4.98084731 L22.4287486,5.88125751 L22.4287486,2.20237774 C22.4253347,0.988744278 21.4434182,0.00512081629 20.2297848,0 Z" stroke-width="2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

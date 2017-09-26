@@ -1,0 +1,75 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Soulments</ion-title>
+
+    <ion-buttons start>
+      <button id="profile" ion-button icon-only (click)="profile()">
+        <img *ngIf="!isNotification" src="assets/img/gear.svg">
+        <img *ngIf="isNotification" src="assets/img/gear-badged.svg">
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button id="search" ion-button icon-only (click)="search()">
+        <img src="assets/img/search.svg">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-searchbar [(ngModel)]="searchTerm" [hidden]="!isSearch"></ion-searchbar>
+
+</ion-header>
+
+<ion-content>
+  <!--TODO: Override Android-style segment control?: https://ionicframework.com/docs/api/config/Config/-->
+  <div padding>
+    <ion-segment [(ngModel)]="soulmentsType">
+      <ion-segment-button value="days">
+        Days
+      </ion-segment-button>
+      <ion-segment-button value="months">
+        Months
+      </ion-segment-button>
+      <ion-segment-button value="years">
+        Years
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <!--<div [ngSwitch]="soulmentsType">-->
+    <!--<ion-list *ngSwitchCase="'days'">-->
+    <ion-list no-lines>
+      <!--TODO: Move delete to detail screen (from list) -->
+      <!--TODO: Which will allow no-lines to work.-->
+      <ion-item-sliding  *ngFor="let item of (currentItems | async)" [hidden]="isSearch && !isItemVisible(item)">
+        <!--<button ion-item detail-none (click)="openItem(item)" no-lines>-->
+        <button ion-item detail-none [navPush]="itemDetailPage" [navParams]="{'item': item}" no-lines>
+
+          <ion-thumbnail item-start>
+            <img *ngIf="item.keyFrameUrl" [src]="item.keyFrameUrl"/>
+            <img *ngIf="!item.keyFrameUrl" [src]="defaultPic"/>
+          </ion-thumbnail>
+
+          <!--TODO: col1 & col2 widths CSS below to .scss-->
+           <div float-left text-wrap style="width: 190px">
+             <p sm-text-medium> {{item.title}} </p>
+             <!--TODO: Get title from HTML text? Convert to remove <img> etc.?-->
+             <p sm-text-body> {{item.text}} </p>
+             <!--TODO: Limit text body to two rows.-->
+             <!--TODO: Show ellipsis for overflowing text body.-->
+          </div>
+
+          <p sm-text-medium text-right float-right style="width: 50px"> {{item.date  | date: 'MMM d'}} </p>
+
+        </button>
+
+        <ion-item-options>
+          <button ion-button color="danger" (click)="deleteItem(item)">
+            {{ 'DELETE_BUTTON' | translate }}
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

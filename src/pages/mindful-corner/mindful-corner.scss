@@ -1,0 +1,15 @@
+page-mindful-corner {
+
+  $mc-item-size: 170px;
+  .mc-item {
+    width: $mc-item-size;
+    font-size: 120%;
+  }
+
+  .mc-item img {
+    border-radius: 5px;
+    width: $mc-item-size;
+    height: $mc-item-size;
+  }
+
+}

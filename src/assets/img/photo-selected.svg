@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>PhotoSelected</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Choose-Photos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="choose-photos" transform="translate(-262.000000, -391.000000)">
+            <g id="Body" transform="translate(30.000000, 160.000000)">
+                <g id="PhotoSelected" transform="translate(232.000000, 231.000000)">
+                    <circle id="Oval" fill="#FFFFFF" cx="17" cy="17" r="17"></circle>
+                    <path d="M17.0003662,2 C8.68904568,2 2,8.68847656 2,17 C2,25.3115234 8.68904568,32 17.0003662,32 C25.3109543,32 32,25.3115234 32,17 C32,8.68847656 25.3109543,2 17.0003662,2 Z M24.2152779,8.49145508 L26.8131149,10.9978027 L13.6269134,26.4182129 L6.86975416,17.4379883 L9.58770538,15.0891113 L13.6444911,20.5478516 L24.2182076,8.49145508 L24.2152779,8.49145508 Z" id="Page-1" fill="#126463"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
